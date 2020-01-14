@@ -1,9 +1,9 @@
 var initializePage = function initializePage(){
     // console.log($('#steps-taken-inner').html())
-    $('#steps-taken-inner').text(50);
-    $('#daily-goal-inner').text(50);
-    $('#watts-saved-inner').text(50);
-    $('#rank-in-friends-inner').text(1);
+    $('#steps-taken-inner').html(50);
+    $('#daily-goal-inner').html(50);
+    $('#watts-saved-inner').html(50);
+    $('#rank-in-friends-inner').html(1);
     $('#percentage-1').attr("value","20");
     $('#percentage-2').attr("value","60");
     $('#percentage-3').attr("value","90");
