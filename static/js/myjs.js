@@ -67,3 +67,7 @@ var getDataFromServer = function getDataFromServer(){
 }
 
 initializePage();
+
+var updateBackdoor = function updateBackdoor(){
+    
+}

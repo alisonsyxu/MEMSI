@@ -1,5 +1,7 @@
 from flask import Flask, render_template, url_for, jsonify, request
 import json
+import os
+import io
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
@@ -8,11 +10,21 @@ app.config['JSON_AS_ASCII'] = False
 def index():
     return render_template('index.html')
 
+@app.route('/backdoor')
+def backdoor():
+    return render_template('backdoor.html')
+
 @app.route('/post_data', methods=['POST'])
 def post_data():
     data = request.get_json()
-    text_input = data['text']
-    return jsonify(text_input)
+    # text_input = data['text']
+    # out_df.to_csv("/var/www/Bigarm/Bigarm/data/"+initial_plan.date_crt.strftime('%d-%b-%Y')
+    # v', index=False)
+    with open("static/results.txt", "a") as myfile:
+        # myfile.write("Train Mean Absolute Error = %.2f\n"%train_mae)
+        myfile.write(data)
+
+    return jsonify(data)
 
 @app.route('/get_data', methods=['GET'])
 def get_data():
@@ -29,5 +41,7 @@ def get_data():
     #     }
 
     testdata = 'test data'
-
+    with open("static/results.txt", "a") as myfile:
+        # myfile.write("Train Mean Absolute Error = %.2f\n"%train_mae)
+        myfile.write(testdata)
     return jsonify(testdata)
