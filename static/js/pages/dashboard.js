@@ -166,14 +166,14 @@
   var pieChartCanvas = $('#sales-chart-canvas').get(0).getContext('2d')
   var pieData        = {
     labels: [
-        'Instore Sales', 
-        'Download Sales',
-        'Mail-Order Sales', 
+        '1', 
+        '2',
+        '3', 
     ],
     datasets: [
       {
         data: [30,12,20],
-        backgroundColor : ['#f56954', '#00a65a', '#f39c12'],
+        backgroundColor : ['#4390bc', '#68a7ca', '#b2d3e6'],
       }
     ]
   }
@@ -197,7 +197,7 @@
   //$('#revenue-chart').get(0).getContext('2d');
 
   var salesGraphChartData = {
-    labels  : ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2', '2012 Q3', '2012 Q4', '2013 Q1', '2013 Q2'],
+    labels  : ['2019 Feb', '2019 Mar', '2019 Apr', '2019 May', '2019 Jun', '2019 Jul', '2019 Aug', '2019 Sep', '2019 Oct', '2019 Nov','2019 Dec','2020 Jan'],
     datasets: [
       {
         label               : 'Digital Goods',
@@ -210,7 +210,7 @@
         pointHoverRadius    : 7,
         pointColor          : '#efefef',
         pointBackgroundColor: '#efefef',
-        data                : [2666, 2778, 4912, 3767, 6810, 5670, 4820, 15073, 10687, 8432]
+        data                : [2666, 2778, 4912, 3767, 6810, 5670, 4820, 15073, 10687, 8432,9094,10010]
       }
     ]
   }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>STEPOLOGY</title>
+  <title>stepology</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -34,7 +34,7 @@
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
 
     <!-- LOGO goes here -->
-    <h3><strong>STEPOLOGY</strong></h3>
+    <h2><strong>stepology</strong></h2>
 
   </nav>
   <!-- /.navbar -->
@@ -48,7 +48,7 @@
             <!-- small box -->
             <div class="small-box" style="background-color: #b2d3e6">
               <div class="inner">
-                <h3 id="steps-taken-inner">150</h3>
+                <h3 id="steps-taken-inner"></h3>
 
                 <p>Steps Taken</p>
               </div>
@@ -63,7 +63,7 @@
             <!-- small box -->
             <div class="small-box" style="background-color: #8dbdd8">
               <div class="inner">
-                <h3 id="daily-goal-inner">53<sup style="font-size: 20px">%</sup></h3>
+                <h3 id="daily-goal-inner"><sup style="font-size: 20px">%</sup></h3>
 
                 <p>of Daily Goal</p>
               </div>
@@ -78,7 +78,7 @@
             <!-- small box -->
             <div class="small-box" style="background-color:#68a7ca">
               <div class="inner">
-                <h3 id="watts-saved-inner">44<sup style="font-size: 20px">W</sup></h3>
+                <h3 id="watts-saved-inner"><sup style="font-size: 20px">W</sup></h3>
 
                 <p>Saved</p>
               </div>
@@ -93,7 +93,7 @@
             <!-- small box -->
             <div class="small-box" style="background-color: #4390bc">
               <div class="inner">
-                <h3 id="rank-in-friends-inner">65<sup style="font-size: 20px">th</sup></h3>
+                <h3 id="rank-in-friends-inner"><sup style="font-size: 20px">th</sup></h3>
 
                 <p>Rank in friends</p>
               </div>
@@ -120,10 +120,10 @@
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <li class="nav-item">
-                      <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Steps</a>
+                      <a class="nav-link active" href="#revenue-chart" data-toggle="tab" style="background-color:#4390bc">Steps</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#sales-chart" data-toggle="tab">Goal</a>
+                      <a class="nav-link" href="#sales-chart" data-toggle="tab" style="background-color:#4390bc; margin-left:5px">Goal</a>
                     </li>
                   </ul>
                 </div>
@@ -140,6 +140,38 @@
                   </div>  
                 </div>
               </div><!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+
+            <!-- TABLE: LATEST ORDERS -->
+            <div class="card">
+              <div class="card-header border-transparent">
+                <h3 class="card-title">Challenges</h3>
+
+                <div class="card-tools">
+                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table m-0">
+                    <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Challenge</th>
+                      <th>Status</th>
+                      <th>Reward</th>
+                    </tr>
+                    </thead>
+                    <tbody id="challenges-list">
+                    </tbody>
+                  </table>
+                </div>
+                <!-- /.table-responsive -->
+              </div>
             </div>
             <!-- /.card -->
           </section>
@@ -204,7 +236,7 @@
               <div class="card-header border-0">
                 <h3 class="card-title">
                   <i class="fas fa-th mr-1"></i>
-                  Some Graph
+                  Statistics this year
                 </h3>
 
                 <div class="card-tools">
@@ -220,24 +252,24 @@
               <div class="card-footer bg-transparent">
                 <div class="row">
                   <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60"
+                    <input id="percentage-1" type="text" class="knob" data-readonly="false" value="0" data-width="60" data-height="60"
                            data-fgColor="#39CCCC">
 
-                    <div class="text-white">Mail-Orders</div>
+                    <div class="text-white">???</div>
                   </div>
                   <!-- ./col -->
                   <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
+                    <input id="percentage-2" type="text" class="knob" data-readonly="false" value="0" data-width="60" data-height="60"
                            data-fgColor="#39CCCC">
 
-                    <div class="text-white">Online</div>
+                    <div class="text-white">???</div>
                   </div>
                   <!-- ./col -->
                   <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
+                    <input id="percentage-3" type="text" class="knob" data-readonly="false" value="0" data-width="60" data-height="60"
                            data-fgColor="#39CCCC">
 
-                    <div class="text-white">In-Store</div>
+                    <div class="text-white">???</div>
                   </div>
                   <!-- ./col -->
                 </div>
@@ -282,11 +314,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <!-- <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.2-pre
-    </div> -->
+    <strong>stepology.com</strong>
   </footer>
 
   <!-- Control Sidebar -->
