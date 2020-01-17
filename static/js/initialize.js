@@ -1,3 +1,5 @@
+// OLD
+
 var scenario=0;
 var timeout7,timeout8,timeout9,timeout10,timeout11,timeout12,timeout13,loop;
 var temp;
@@ -23,7 +25,7 @@ var demo = function demo(){
     }, 14000);
     timeout10 = setTimeout(function(){ 
         scenario=11;
-    }, 23000);
+    }, 27000);
     timeout11 = setTimeout(function(){ 
         scenario=12;
     }, 32000);
@@ -124,7 +126,7 @@ var initializePage = function initializePage(){
             $('#car-8').html(getRandomInt(5,14)); // g
         } else if (scenario==14){ // 39-43
             $('#car-1').html(getRandomInt(5,14)); // g
-            $('#car-4').html(getRandomInt(16,27)); // y
+            $('#car-4').html(getRandomInt(5,14)); // y
             $('#car-5').html(getRandomInt(5,14)); // g
             $('#car-8').html(getRandomInt(5,14)); // g
         } 
@@ -216,7 +218,7 @@ var initializePage = function initializePage(){
                 $('#car-7').html(getRandomInt(5,14)); // g
             } else if (scenario==14){ // outgoing
                 $('#car-2').html(getRandomInt(5,14)); // g
-                $('#car-3').html(getRandomInt(16,27)); // y
+                $('#car-3').html(getRandomInt(5,14)); // y
                 $('#car-6').html(getRandomInt(5,14)); // g
                 $('#car-7').html(getRandomInt(5,14)); // g
             } 
