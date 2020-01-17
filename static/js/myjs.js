@@ -1,22 +1,3 @@
-var initializePage = function initializePage(){
-    // console.log($('#steps-taken-inner').html())
-    $('#steps-taken-inner').html(50);
-    $('#daily-goal-inner').html(50);
-    $('#watts-saved-inner').html(50);
-    $('#rank-in-friends-inner').html(1);
-    $('#percentage-1').attr("value","20");
-    $('#percentage-2').attr("value","60");
-    $('#percentage-3').attr("value","90");
-
-    var challenges = [
-        [1, '100 stairs in a day','Completed','5% discount on MTR ticket'],
-        [2, '1000 stairs in a week','Pending','5% discount on MTR ticket'],
-        [3, '8000W of energy saved','Incomplete','hi'],
-        [4, 'Ranked top 10 among friends for 3 days','Pending','5% discount on MTR ticket'],
-        [5, 'Completed daily goal for 10 days in a row','Completed','5% discount on MTR ticket']]
-    addChallenge(challenges);
-}
-
 var addChallenge = function addChallenge(challenges){
     var completed = '<span class="badge badge-success">Completed</span>';
     var pending = '<span class="badge badge-info">Pending</span>';
@@ -54,11 +35,7 @@ var getDataFromServer = function getDataFromServer(){
         dataType: 'json',
         data: JSON.stringify({text:'hi'}),
         success: function (response) {
-            if (!response.Error) {
-                console.log(response);
-            } else {
-                alert(response.Msg)
-            }
+            console.log(response);
         },
         error: function (error) {
             alert(error.message)
@@ -66,8 +43,32 @@ var getDataFromServer = function getDataFromServer(){
     })
 }
 
-initializePage();
 
-var updateBackdoor = function updateBackdoor(){
-    
+var updateData = function updateData(){
+    var data1 = JSON.stringify({
+        name:$('#steps-taken-inner').attr("id"),
+        number:parseInt(document.getElementById('steps-taken-inner').value,10),
+        string:"",
+    })
+    updateBackdoor(data1);
+}
+
+var updateBackdoor = function updateBackdoor(data){
+    console.log(data);
+    $.ajax({
+        url: '/send_backdoor',
+        method: 'POST',
+        headers: {
+            'Content-Type':'application/json'
+        },
+        dataType: 'json',
+        data: data,
+        success: function (response) {
+            console.log(response);
+
+        },
+        error: function (error) {
+            alert(error.message)
+        }
+    })
 }
