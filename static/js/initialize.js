@@ -50,7 +50,7 @@ var initializePage = function initializePage(){
         $('#car-8').html(getRandomInt(10,12));
         document.getElementById("car-8-box").setAttribute("style", "background-color: "+getColor($('#car-8').html()));
 
-    },500);
+    },1000);
 
     setTimeout(function(){
         var interval_2 = setInterval(function(){
@@ -66,8 +66,8 @@ var initializePage = function initializePage(){
             $('#car-7').html(getRandomInt(14,17));
             document.getElementById("car-7-box").setAttribute("style", "background-color: "+getColor($('#car-7').html()));
             // $('#car-8').html(getRandomInt(10,12));
-        },500);
-    }, 250);
+        },1000);
+    }, 500);
 
 
 }
