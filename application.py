@@ -5,7 +5,7 @@ import io
 from pymongo import MongoClient
 import mysql.connector
 from mysql.connector import errorcode
-from database import insert_data, read_data
+# from database import insert_data, read_data
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False

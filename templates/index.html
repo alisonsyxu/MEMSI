@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>stepology</title>
+  <title>InnoCarnival</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -33,22 +33,15 @@
 <button class="hold-transition sidebar-mini layout-fixed">
 <div style="float: right">
 
-    <button class="button button3" id="emergency" onclick="emergency()">Emergency</button>
-    <button class="button button3" id="peakout" onclick="peakout()">Out</button>
-    <button class="button button3" id="peakin" onclick="peakin()">In</button>
-    <button class="button button2" id="heavyout" onclick="heavyout()">Out</button>
-    <button class="button button2" id="heavyin" onclick="heavyin()">In</button>
-    <button class="button" id="normalout" onclick="normalout()">Out</button>
-    <button class="button" id="normalin" onclick="normalin()">In</button>
-    <button class="button button4" id="demobutton" onclick="demo()">Demo</button>
+    <button class="button button2"  onclick="emergency()">test</button>
     
     
     
 </div>
 <div class="wrapper">
-  <img src="static/logo.png" alt="logo" width="210" height="130">
-  <h2><strong style="margin: 20px"><strong></strong></h2> - <span id="time"></span><br><br>
-  <h3 style="text-align:center">荃灣線 金鐘站 往荃灣 Admiralty Station</h3><br>
+  <!-- <img src="static/logo.png" alt="logo" width="210" height="130"> -->
+  <h2><strong style="margin: 20px"><strong>InnoCarnival</strong></h2> - <span id="time"></span><br><br>
+  <h4 style="text-align:center">DATA VISUALIZATION</h4><br>
 
 
     <!-- Main content -->
@@ -58,11 +51,11 @@
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div id="car-1-box" class="small-box" style="background-color: #4CAF50">
+            <div id="car-1-box" class="small-box" style="background-color: #426ab3">
               <div class="inner">
-                <h3><span id="car-1"></span><sup style="font-size: 20px">waiting</sup></h3>
+                <h3><span id="box-1"></span><sup id="box-1-unit" style="font-size: 20px">units</sup></h3>
 
-                <p>Car 1</p>
+                <p id="box-1-name"></p>
               </div>
               <!-- <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -72,11 +65,11 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div id="car-2-box" class="small-box" style="background-color: #4CAF50">
+            <div id="car-2-box" class="small-box" style="background-color: #228fbd">
               <div class="inner">
-                <h3><span id="car-2"></span><sup style="font-size: 20px">waiting</sup></h3>
+                <h3><span id="box-2"></span><sup id="box-2-unit" style="font-size: 20px">units</sup></h3>
 
-                <p>Car 2</p>
+                <p id="box-2-name"></p>
               </div>
               <!-- <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -86,11 +79,11 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div id="car-3-box" class="small-box" style="background-color:#4CAF50">
+            <div id="car-3-box" class="small-box" style="background-color:#2a5caa">
               <div class="inner">
-                <h3><span id="car-3"></span><sup style="font-size: 20px">waiting</sup></h3>
+                <h3><span id="box-3"></span><sup id="box-3-unit" style="font-size: 20px">units</sup></h3>
 
-                <p>Car 3</p>
+                <p id="box-3-name"></p>
               </div>
               <!-- <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -100,11 +93,11 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div id="car-4-box" class="small-box" style="background-color: #4CAF50">
+            <div id="car-4-box" class="small-box" style="background-color: #7bbfea">
               <div class="inner">
-                <h3><span id="car-4"></span><sup style="font-size: 20px">waiting</sup></h3>
+                <h3><span id="box-4"></span><sup id="box-4-unit" style="font-size: 20px">units</sup></h3>
 
-                <p>Car 4</p>
+                <p id="box-4-name"></p>
               </div>
               <!-- <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -112,65 +105,7 @@
             </div>
           </div>
           <!-- ./col -->
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div id="car-5-box" class="small-box" style="background-color: #4CAF50">
-              <div class="inner">
-                <h3><span id="car-5"></span><sup style="font-size: 20px">waiting</sup></h3>
 
-                <p>Car 5</p>
-              </div>
-              <!-- <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div> -->
-            </div>
-          </div>
-          <!-- ./col -->
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div id="car-6-box" class="small-box" style="background-color:#4CAF50">
-              <div class="inner">
-                <h3><span id="car-6"></span><sup style="font-size: 20px">waiting</sup></h3>
-
-                <p>Car 6</p>
-              </div>
-              <!-- <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div> -->
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div id="car-7-box" class="small-box" style="background-color: #4CAF50">
-              <div class="inner">
-                <h3><span id="car-7"></span><sup style="font-size: 20px">waiting</sup></h3>
-
-                <p>Car 7</p>
-              </div>
-              <!-- <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div> -->
-            </div>
-          </div>
-          <!-- ./col -->
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div id="car-8-box" class="small-box" style="background-color: #4CAF50">
-              <div class="inner">
-                <h3><span id="car-8"></span><sup style="font-size: 20px">waiting</sup></h3>
-
-                <p>Car 8</p>
-              </div>
-              <!-- <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div> -->
-            </div>
-          </div>
-          <!-- ./col -->
         </div>
         <!-- /.row -->
 
@@ -364,9 +299,7 @@
   </aside>
   <!-- /.control-sidebar -->
 </div>
-<footer class="main-footer">
-  <strong>stepology.com</strong>
-</footer>
+
 <!-- ./wrapper -->
 
 <!-- jQuery -->

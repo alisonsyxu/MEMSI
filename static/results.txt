@@ -4330,3 +4330,17 @@ Connection established
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 create database here 1
 Connection established
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+create database here 1
+Connection established
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+create database here 1
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+create database here 1
+2003: Can't connect to MySQL server on 'stepology-db.mysql.database.azure.com:3306' (8 nodename nor servname provided, or not known)test datatest data
