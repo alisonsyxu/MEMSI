@@ -1,4 +1,11 @@
-// $(function () {
+/*
+ * Author: Abdullah A Almsaeed
+ * Date: 4 Jan 2014
+ * Description:
+ *      This is a demo file used only for the main dashboard (index.html)
+ **/
+
+$(function () {
 
   'use strict'
 
@@ -107,10 +114,10 @@
   //$('#revenue-chart').get(0).getContext('2d');
 
   var salesChartData = {
-    labels  : ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     datasets: [
       {
-        label               : 'Weekly steps',
+        label               : 'Digital Goods',
         backgroundColor     : 'rgba(60,141,188,0.9)',
         borderColor         : 'rgba(60,141,188,0.8)',
         pointRadius          : false,
@@ -121,7 +128,7 @@
         data                : [28, 48, 40, 19, 86, 27, 90]
       },
       {
-        label               : 'Weekly goals',
+        label               : 'Electronics',
         backgroundColor     : 'rgba(210, 214, 222, 1)',
         borderColor         : 'rgba(210, 214, 222, 1)',
         pointRadius         : false,
@@ -166,14 +173,14 @@
   var pieChartCanvas = $('#sales-chart-canvas').get(0).getContext('2d')
   var pieData        = {
     labels: [
-        '1', 
-        '2',
-        '3', 
+        'Instore Sales', 
+        'Download Sales',
+        'Mail-Order Sales', 
     ],
     datasets: [
       {
         data: [30,12,20],
-        backgroundColor : ['#4390bc', '#68a7ca', '#b2d3e6'],
+        backgroundColor : ['#f56954', '#00a65a', '#f39c12'],
       }
     ]
   }
@@ -197,7 +204,7 @@
   //$('#revenue-chart').get(0).getContext('2d');
 
   var salesGraphChartData = {
-    labels  : ['2019 Feb', '2019 Mar', '2019 Apr', '2019 May', '2019 Jun', '2019 Jul', '2019 Aug', '2019 Sep', '2019 Oct', '2019 Nov','2019 Dec','2020 Jan'],
+    labels  : ['2011 Q1', '2011 Q2', '2011 Q3', '2011 Q4', '2012 Q1', '2012 Q2', '2012 Q3', '2012 Q4', '2013 Q1', '2013 Q2'],
     datasets: [
       {
         label               : 'Digital Goods',
@@ -210,7 +217,7 @@
         pointHoverRadius    : 7,
         pointColor          : '#efefef',
         pointBackgroundColor: '#efefef',
-        data                : [2666, 2778, 4912, 3767, 6810, 5670, 4820, 15073, 10687, 8432,9094,10010]
+        data                : [2666, 2778, 4912, 3767, 6810, 5670, 4820, 15073, 10687, 8432]
       }
     ]
   }
@@ -254,4 +261,4 @@
     }
   )
 
-// })
+})
