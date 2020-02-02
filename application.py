@@ -1,5 +1,6 @@
 from flask import Flask, render_template, url_for, jsonify, request
 import json
+from sampleData import getSampleData
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
@@ -16,29 +17,7 @@ def post_data():
 
 @app.route('/get_data', methods=['GET'])
 def get_data():
-    # testdata = {
-    #     data:{
-    #         dataSets: [{
-    #             values: [{x: 1, y: 88},{x: 2, y: 77},{x: 3, y: 105},{x: 4, y: 135},{x: 5, y: 88},{x: 6, y: 77},{x: 7, y: 105},{x: 8, y: 135}],
-    #             label: 'A',
-    #         }, {
-    #             values: [{x: 1, y: 90},{x: 2, y: 130},{x: 3, y: 100},{x: 4, y: 105},{x: 5, y: 90},{x: 6, y: 130},{x: 7, y: 100},{x: 8, y: 105}],
-    #             label: 'B',
-    #         }],
-    #         }
-    #     }
-
-    testdata = {
-        "data":{
-            "dataSets": [{
-                "values": [{"x": 1, "y": 88},{"x": 2, "y": 77},{"x": 3, "y": 105},{"x": 4, "y": 135},{"x": 5, "y": 88},{"x": 6, "y": 77},{"x": 7, "y": 105},{"x": 8, "y": 135}],
-                "label": 'A',
-            }, {
-                "values": [{"x": 1, "y": 90},{"x": 2, "y": 130},{"x": 3, "y": 100},{"x": 4, "y": 105},{"x": 5, "y": 90},{"x": 6, "y": 130},{"x": 7, "y": 100},{"x": 8, "y": 105}],
-                "label": 'B',
-            }],
-            }
-        }
+    testdata = getSampleData()
 
     # testdata = 'test data'
 
