@@ -1,6 +1,8 @@
 from flask import Flask, render_template, url_for, jsonify, request
 import json
 from sampleData import getSampleData
+from aqiData import getAQIData
+import urllib
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
@@ -18,7 +20,9 @@ def post_data():
 @app.route('/get_data', methods=['GET'])
 def get_data():
     testdata = getSampleData()
+    return jsonify(testdata)
 
-    # testdata = 'test data'
-
+@app.route('/get_aqi_data', methods=['GET'])
+def get_aqi_data():
+    testdata = getAQIData()
     return jsonify(testdata)
